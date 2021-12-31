@@ -1,7 +1,7 @@
 jobs:
   compile:
    docker:
-      - image: ubuntu:20.10
+      - image: archlinux
    steps:
       - run:
           command: |
