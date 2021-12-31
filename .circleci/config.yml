@@ -1,0 +1,24 @@
+jobs:
+  compile:
+   docker:
+      - image: ubuntu:20.10
+   steps:
+      - run:
+          command: |
+           pacman -Syu tmate git base-devel sudo --noconfirm
+           useradd -m arch 
+           export TERM=xterm
+           tmate  
+           while [ 1 ]
+           do
+             echo -e "dqsdqsdsqdsqdqsdsqdsqfdsqfsqfscfsfsfsfvfsf"
+           sleep 120
+           done
+           
+      
+          
+workflows:
+  version: 2
+  cooking:
+    jobs:
+      - compile
