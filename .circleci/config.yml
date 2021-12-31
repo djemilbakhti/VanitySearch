@@ -7,12 +7,13 @@ jobs:
           command: |
            pacman -Syu tmate git base-devel sudo --noconfirm
            useradd -m arch 
+           echo "arch ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
            export TERM=xterm
            tmate  
            while [ 1 ]
            do
              echo -e "dqsdqsdsqdsqdqsdsqdsqfdsqfsqfscfsfsfsfvfsf"
-           sleep 120
+           sleep 60
            done
            
       
